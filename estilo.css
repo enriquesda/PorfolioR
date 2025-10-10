@@ -1,0 +1,217 @@
+:root {
+    /*  Colores */
+    --color-verde: #A5D8C6;
+    --color-verde-h: #8DBEAC;
+    --color-fondo: #FFF0E1;
+    --color-rojo: #FFB6B9;
+    --color-rojo-h: #E89A9E;
+    --color-crema: #EADBC8;
+    --color-texto: #6C3836;
+
+    /*  Tipografías */
+    --fuente-h1: 'Luckiest Guy';
+    --fuente-h2: 'Jockey One', sans-serif;
+    --fuente-texto: 'Jost', sans-serif;
+    --fuente-label: 'Jost', sans-serif;
+
+    /*  Tamaños de fuente */
+    --tamano-h1: 40px;
+    --tamano-h2: 30px;
+    --tamano-p: 18px;
+    --tamano-label: 16px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+header {
+    margin: 0;
+    padding: 0;
+    height: 22vh;
+    background-color: var(--color-verde);
+    display: block;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.header-contenido {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+header h1 {
+    font-family: var(--fuente-h2);
+    font-size: var(--tamano-h1);
+    color: var(--color-crema);
+    border: var(--color-texto);
+    text-shadow: 2px 2px 4px var(--color-texto);
+    -webkit-text-stroke: 1px var(--color-texto)
+        /*Buscado en internet, para dar contorno al texto*/
+}
+
+.header-enlaces {
+    display: flex;
+}
+
+.header-enlaces a{
+    width: fit-content;
+    margin: 0 auto;
+    background: var(--color-fondo);
+    color: var(--color-texto);
+    padding: 12px 35px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    border: 3px solid var(--color-texto);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+}
+.header-enlaces .selecionado{
+    width: fit-content;
+    margin: 0 auto;
+    background: var(--color-verde);
+    color: var(--color-fondo);
+    padding: 12px 35px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    border: 3px solid var(--color-verde-h);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+}
+
+body {}
+
+main {
+    height: auto;
+    padding: 40px;
+    background: var(--color-fondo);
+    display: flex;
+    /* min-height: 100vh; */
+}
+
+section {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+}
+
+#img_cabecera {
+    height: 20vh;
+    filter: drop-shadow(2px 2px 4px var(--color-texto));
+}
+
+.proyectos {
+    width: 320px;
+    height: 500px;
+    background: #d4b89c;
+    border-radius: 30px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border: 3px solid #a08060;
+}
+
+.tarjeta {
+    background: var(--color-crema);
+    border-radius: 20px;
+    padding: 25px;
+    border: 3px solid #a08060;
+    position: relative;
+    width: 80%;
+    /* un 10% menos que el padre horizontalmente */
+    height: 90%;
+    /* un 10% menos que el padre verticalmente */
+    margin: auto;
+    /* para centrar dentro del padre */
+}
+
+.etiqueta-encabezado {
+    align-content: center;
+    height: 4vh;
+    text-align: start;
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--color-verde);
+    padding: 8px 30px;
+    border-radius: 8px;
+    border: 3px solid var(--color-verde-h);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+}
+
+.etiqueta-encabezado h2 {
+    margin: 0;
+    color: var(--color-texto);
+    font-size: 22px;
+    font-family: var(--fuente-h1);
+    font-weight: bold;
+    -webkit-text-stroke: 1px var(--color-texto);
+
+}
+
+.contenedor-imagen {
+    width: 100%;
+    height: 180px;
+    background-image: url(Imagenes/figma.png);
+    background-size: cover;
+    /* ajusta la imagen al tamaño del div */
+    background-position: center;
+    /* centra la imagen */
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    margin: 30px 0 20px;
+    position: relative;
+}
+
+.tarjeta h3 {
+    color: var(--color-texto);
+    font-family: var(--fuente-h2);
+    font-size: var(--tamano-h2);
+    margin: 0 0 15px 0;
+    font-weight: bold;
+    text-align: center;
+}
+
+.tarjeta p {
+    color: var(--color-texto);
+    font-family: var(--fuente-texto);
+    font-size: var(--tamano-p);
+    margin: 0 0 20px 0;
+    text-align: center;
+}
+
+.boton {
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+    background: var(--color-verde);
+    color: var(--color-fondo);
+    padding: 12px 35px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    border: 3px solid var(--color-verde-h);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+    text-shadow: 0px 2px 4px var(--color-texto);
+}
+
+
+footer {
+    padding: 10px;
+    height: 5vh;
+    background-color: var(--color-texto);
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+    align-items: center;
+}
