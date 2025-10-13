@@ -161,7 +161,6 @@ section {
 .contenedor-imagen {
     width: 100%;
     height: 180px;
-    background-image: url(Imagenes/figma.png);
     background-size: cover;
     /* ajusta la imagen al tamaño del div */
     background-position: center;
