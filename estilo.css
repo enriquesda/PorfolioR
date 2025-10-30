@@ -1,5 +1,4 @@
 :root {
-    /*  Colores */
     --color-verde: #A5D8C6;
     --color-verde-h: #8DBEAC;
     --color-fondo: #FFF0E1;
@@ -8,33 +7,29 @@
     --color-crema: #EADBC8;
     --color-texto: #6C3836;
 
-    /*  Tipografías */
     --fuente-h1: 'Luckiest Guy';
     --fuente-h2: 'Jockey One', sans-serif;
     --fuente-texto: 'Jost', sans-serif;
-    --fuente-label: 'Jost', sans-serif;
 
-    /*  Tamaños de fuente */
-    --tamano-h1: 40px;
-    --tamano-h2: 30px;
-    --tamano-p: 18px;
-    --tamano-label: 16px;
+    --tamano-h1: 50px;
+    --tamano-h2: 25px;
+    --tamano-p: 12px;
 }
 
 * {
     margin: 0;
     padding: 0;
-
 }
 
+/* ==================== HEADER ==================== */
 header {
-    margin: 0;
-    padding: 0;
     height: 22vh;
     background-color: var(--color-verde);
-    display: block;
-    justify-content: space-evenly;
-    align-items: center;
+    background-image: url('Imagenes/fondo_header.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
 }
 
 .header-contenido {
@@ -48,19 +43,21 @@ header h1 {
     font-family: var(--fuente-h2);
     font-size: var(--tamano-h1);
     color: var(--color-crema);
-    border: var(--color-texto);
     text-shadow: 2px 2px 4px var(--color-texto);
-    -webkit-text-stroke: 1px var(--color-texto)
-        /*Buscado en internet, para dar contorno al texto*/
+    -webkit-text-stroke: 1px var(--color-texto);
+}
+
+#img_cabecera {
+    height: 20vh;
+    filter: drop-shadow(2px 2px 4px var(--color-texto));
 }
 
 .header-enlaces {
-    display: flex;
+    margin-top: 10px;
 }
 
-.header-enlaces a{
-    width: fit-content;
-    margin: 0 auto;
+.header-enlaces a {
+    margin: 0 40px;
     background: var(--color-fondo);
     color: var(--color-texto);
     padding: 12px 35px;
@@ -71,28 +68,20 @@ header h1 {
     border: 3px solid var(--color-texto);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
 }
-.header-enlaces .selecionado{
-    width: fit-content;
-    margin: 0 auto;
+
+.header-enlaces .selecionado {
     background: var(--color-verde);
     color: var(--color-fondo);
-    padding: 12px 35px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 14px;
-    border: 3px solid var(--color-verde-h);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
 }
 
-body {}
-
+/* ==================== MAIN ==================== */
 main {
-    height: auto;
-    padding: 40px;
+    padding: 25px 25px 60px;
     background: var(--color-fondo);
     display: flex;
-    /* min-height: 100vh; */
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
 }
 
 section {
@@ -100,75 +89,69 @@ section {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 30px;
     align-items: center;
 }
 
-#img_cabecera {
-    height: 20vh;
-    filter: drop-shadow(2px 2px 4px var(--color-texto));
-}
-
+/* ==================== PROYECTOS ==================== */
 .proyectos {
-    width: 320px;
-    height: 500px;
+    width: 256px;
+    height: 400px;
     background: #d4b89c;
     border-radius: 30px;
     padding: 20px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     border: 3px solid #a08060;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .tarjeta {
     background: var(--color-crema);
     border-radius: 20px;
-    padding: 25px;
+    padding: 10px;
     border: 3px solid #a08060;
     position: relative;
-    width: 80%;
-    /* un 10% menos que el padre horizontalmente */
-    height: 90%;
-    /* un 10% menos que el padre verticalmente */
-    margin: auto;
-    /* para centrar dentro del padre */
+    width: 90%;
+    height: 95%;
+    display: flex;
+    flex-direction: column;
 }
 
 .etiqueta-encabezado {
-    align-content: center;
-    height: 4vh;
-    text-align: start;
     position: absolute;
     top: -40px;
     left: 50%;
     transform: translateX(-50%);
+    height: 4vh;
     background: var(--color-verde);
     padding: 8px 30px;
     border-radius: 8px;
     border: 3px solid var(--color-verde-h);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+    display: flex;
+    align-items: center;
 }
 
 .etiqueta-encabezado h2 {
-    margin: 0;
     color: var(--color-texto);
     font-size: 22px;
     font-family: var(--fuente-h1);
     font-weight: bold;
-    -webkit-text-stroke: 1px var(--color-texto);
-
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .contenedor-imagen {
     width: 100%;
-    height: 180px;
+    height: 144px;
     background-size: cover;
-    /* ajusta la imagen al tamaño del div */
     background-position: center;
-    /* centra la imagen */
     background-repeat: no-repeat;
     border-radius: 10px;
     margin: 30px 0 20px;
-    position: relative;
+    flex-shrink: 0;
 }
 
 .tarjeta h3 {
@@ -178,39 +161,154 @@ section {
     margin: 0 0 15px 0;
     font-weight: bold;
     text-align: center;
+    flex-shrink: 0;
 }
 
 .tarjeta p {
     color: var(--color-texto);
     font-family: var(--fuente-texto);
     font-size: var(--tamano-p);
-    margin: 0 0 20px 0;
     text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.5;
 }
 
 .boton {
     display: block;
     width: fit-content;
-    margin: 0 auto;
+    margin: auto auto 10px;
     background: var(--color-verde);
     color: var(--color-fondo);
-    padding: 12px 35px;
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-family: var(--fuente-h1);
+    font-weight: bold;
+    font-size: 22px;
+    letter-spacing: 1px;
+    border: 3px solid var(--color-verde-h);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+    text-shadow: 0 2px 4px var(--color-texto);
+    flex-shrink: 0;
+}
+
+/* ==================== CONOCIMIENTOS ==================== */
+.conocimientos {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 90%;
+    max-width: 900px;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.conocimientos h2 {
+    font-family: var(--fuente-h2);
+    font-size: 40px;
+    color: var(--color-texto);
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.629);
+    flex: 1 1 300px;
+}
+
+.conocimientos img {
+    height: 70px;
+    width: auto;
+    filter: drop-shadow(2px 2px 4px var(--color-texto));
+}
+
+/* ==================== FOOTER ==================== */
+footer {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 30px;
+    padding: 10px 20px;
+    background-color: var(--color-texto);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+footer .footer-contenido {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+footer .footer-contenido a {
+    position: absolute;
+    left: 20px;
+    background: var(--color-fondo);
+    color: var(--color-texto);
+    padding: 8px 25px;
     border-radius: 8px;
     text-decoration: none;
     font-weight: bold;
     font-size: 14px;
-    border: 3px solid var(--color-verde-h);
+    border: 3px solid var(--color-texto);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
-    text-shadow: 0px 2px 4px var(--color-texto);
 }
 
+footer h2 {
+    font-family: var(--fuente-h2);
+    font-size: 20px;
+    color: var(--color-fondo);
+}
 
-footer {
-    padding: 10px;
-    height: 5vh;
-    background-color: var(--color-texto);
-    display: flex;
-    justify-content: space-evenly;
-    align-content: center;
-    align-items: center;
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 768px) {
+    header {
+        height: 18vh;
+    }
+
+    .header-contenido h1 {
+        font-size: 32px;
+        text-shadow: 1px 1px 3px var(--color-texto);
+        -webkit-text-stroke: 0.5px var(--color-texto);
+    }
+
+    #img_cabecera {
+        height: 12vh;
+    }
+
+    .header-enlaces {
+        margin-top: 40px;
+    }
+
+    section {
+        margin-top: 70px;
+    }
+
+    .proyectos {
+        width: 80%;
+        height: 95%;
+    }
+
+    .tarjeta {
+        height: auto;
+    }
+
+    .tarjeta p {
+        font-size: 13px;
+    }
+
+    .boton {
+        margin-top: 12px;
+        font-size: 18px;
+        padding: 10px 20px;
+    }
+
+    .conocimientos h2 {
+        font-size: 28px;
+    }
+
+    .conocimientos img {
+        height: 50px;
+    }
 }
