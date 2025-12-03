@@ -312,3 +312,34 @@ footer h2 {
         height: 50px;
     }
 }
+
+
+
+/* Estilo para el enlace secundario (Repositorio) */
+.enlace-repo {
+    display: inline-block;
+    margin-top: 8px; 
+    margin-bottom: 15px;
+    
+    /* Tipografía */
+    font-family: var(--fuente-h2);
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    
+    /* Colores */
+    color: var(--color-texto);
+    background-color: transparent; 
+    
+    /* Bordes y visuales */
+    border-bottom: 2px solid var(--color-texto); 
+    padding-bottom: 2px;
+    transition: all 0.2s ease;
+}
+
+.enlace-repo:hover {
+    color: var(--color-rojo-h); 
+    border-bottom-color: var(--color-rojo-h);
+    transform: translateY(-2px);
+}
